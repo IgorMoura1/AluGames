@@ -1,11 +1,11 @@
 import com.google.gson.annotations.SerializedName
 
-class Game(@SerializedName("title") val title:String,
-           @SerializedName("thumb") val cover:String) {
+class Game(val title:String,
+           val cover:String) {
     // diferença entre val e var
     // var é uma variável mutável
     // val é uma variável imutável
-    val description = ""
+    var description:String? = null
     override fun toString(): String {
         return "Meu Jogo: \n" +
                 "Título: $title \n" +
